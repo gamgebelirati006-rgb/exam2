@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ძებნის შედეგები</title>
+</head>
+<body>
+
+<h2>ძებნის შედეგები</h2>
+<div id="result"></div>
+
+<script>
+    // URL-დან q პარამეტრის ამოღება
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get("q");
+
+    document.getElementById("result").innerHTML = 
+        "თქვენ ეძებთ: <b>" + searchQuery + "</b>";
+</script>
+
+</body>
+</html> 

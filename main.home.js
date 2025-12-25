@@ -36,7 +36,13 @@ function slidesShower(number) {
 slidesShower(1);
 
 function searchSite() {
-    let query = document.getElementById("searchInput").value.toLowerCase();
+    let query = document.getElementById("searchInput").value.trim();
 
+    if (query === "") {
+        alert("გთხოვ შეიყვანე ტექსტი.");
+        return;
+    }
+
+    // გადადის search.html ფაილზე და გადასცემს ტექსტს
     window.location.href = "search.html?q=" + encodeURIComponent(query);
 }
